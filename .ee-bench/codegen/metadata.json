@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "instance_id": "fluentassertions__fluentassertions-2321",
+  "base_commit": "cec77e068f6244769edc8e6f449ec400e6f1fd10",
+  "benchmark_type": "codegen",
+  "fail_to_pass": [
+    "Not initialized yet"
+  ],
+  "pass_to_pass": [
+    "Not initialized yet"
+  ],
+  "evaluation": {
+    "test_framework": "net6.0",
+    "env_setup_version": "1.0",
+    "run_tests_version": "1.0",
+    "files": {
+      "scripts/install.sh": "dotnet build\ndotnet add \"./Tests/FluentAssertions.Specs/FluentAssertions.Specs.csproj\" package JUnitTestLogger"
+    }
+  },
+  "environment": {
+    "project_root": "/app",
+    "dockerfile_tag": "fluentassertions__fluentassertions"
+  },
+  "language": "csharp",
+  "env_setup_version": "1.0",
+  "run_tests_version": "1.0",
+  "test_framework": "net6.0",
+  "test_framework_flag": "--framework net6.0",
+  "test_project": "./Tests/FluentAssertions.Specs/FluentAssertions.Specs.csproj",
+  "test_logger": "junit;LogFilePath=$ARTIFACTS_DIR/tests.log",
+  "execution_flags": "",
+  "fields": {
+    "repo": "fluentassertions/fluentassertions"
+  }
+}
