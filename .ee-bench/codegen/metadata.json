@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "instance_id": "fluentassertions__fluentassertions-2318",
+  "base_commit": "a1d10b55231409d971380c9f91d47c1ce51bbcef",
+  "benchmark_type": "codegen",
+  "fail_to_pass": [
+    "Not initialized yet"
+  ],
+  "pass_to_pass": [
+    "Not initialized yet"
+  ],
+  "evaluation": {
+    "test_framework": "",
+    "env_setup_version": "1.1",
+    "run_tests_version": "1.1",
+    "files": {
+      "scripts/install.sh": "dotnet build\ndotnet add \"./Tests/FluentAssertions.Equivalency.Specs/FluentAssertions.Equivalency.Specs.csproj\" package JUnitTestLogger"
+    }
+  },
+  "environment": {
+    "project_root": "/app",
+    "dockerfile_tag": "fluentassertions__fluentassertions"
+  },
+  "language": "csharp",
+  "env_setup_version": "1.1",
+  "run_tests_version": "1.1",
+  "test_framework": "",
+  "test_framework_flag": "",
+  "test_project": "./Tests/FluentAssertions.Equivalency.Specs/FluentAssertions.Equivalency.Specs.csproj",
+  "test_logger": "junit;LogFilePath=$ARTIFACTS_DIR/tests.log",
+  "execution_flags": "",
+  "fields": {
+    "repo": "fluentassertions/fluentassertions"
+  }
+}
