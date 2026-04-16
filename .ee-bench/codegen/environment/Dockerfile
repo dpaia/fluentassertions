@@ -44,8 +44,7 @@ RUN git clone https://github.com/{{ instance.owner }}/{{ instance.repo_name }}.g
 WORKDIR /app
 RUN git checkout {{ instance.base_commit }}
 
-RUN dotnet add "./Tests/FluentAssertions.Specs/FluentAssertions.Specs.csproj" package JUnitTestLogger && \
-    dotnet add "./Tests/FluentAssertions.Equivalency.Specs/FluentAssertions.Equivalency.Specs.csproj" package JUnitTestLogger && \
+RUN dotnet add "{{ instance.test_project }}" package JUnitTestLogger && \
     dotnet build -p:TreatWarningsAsErrors=false -p:EnforceCodeStyleInBuild=false -p:EnableNETAnalyzers=false
 
 LABEL ee-bench.type="codegen"
