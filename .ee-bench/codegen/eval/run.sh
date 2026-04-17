@@ -22,7 +22,7 @@ _run_tests() {
   mkdir -p "$ARTIFACTS_DIR"
 
   set +e
-  dotnet test  "{{ instance.test_project }}" \
+  dotnet test {{ instance.test_framework_flag }} "{{ instance.test_project }}" \
     --logger "junit;LogFilePath=$ARTIFACTS_DIR/tests.log" -p:TreatWarningsAsErrors=false -p:EnforceCodeStyleInBuild=false -p:EnableNETAnalyzers=false \
     > "/tmp/${label}_stdout.log" 2> "/tmp/${label}_stderr.log"
   set -e
